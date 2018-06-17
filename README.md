@@ -39,7 +39,7 @@ Step 4 : Install dependencies
 ```
 $ cd ~/virtualCommander 
 $ source ~/virtualenvironment/joystick/bin/activate
-(joystick)hostname:dramasamy$ pip install  -r requirements.txt
+(joystick)dramasamy@hostname$ pip install  -r requirements.txt
 ```
 
 Step 5 : Start the application 

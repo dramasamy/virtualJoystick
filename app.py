@@ -48,12 +48,10 @@ class RandomThread(Thread):
 
 @app.route('/')
 def index():
-    #only by sending this page first will the client be connected to the socketio instance
     return render_template('index.html')
 
 @app.route('/admin')
 def admin():
-    #only by sending this page first will the client be connected to the socketio instance
     return render_template('admin.html')
 
 @socketio.on('connect', namespace='/test')

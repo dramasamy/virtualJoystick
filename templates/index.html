@@ -1,8 +1,21 @@
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Mission to the MOON</title>
+	<meta charset="UTF-8">
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+    <script src="static/user/js/application.js"></script>
+    <script type="text/javascript" src="static/user/js/jquery.qrcode.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link rel="icon" type="image/png" href="static/user/images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="static/user/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="static/user/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="static/user/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="static/user/vendor/select2/select2.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="static/user/css/util.css">
+	<link rel="stylesheet" type="text/css" href="static/user/css/main.css">
 		<style>
 		body {
 			overflow	: hidden;
@@ -34,34 +47,51 @@
 			-moz-user-select	: none;
 		}
 		</style>
-	</head>
-	<body>
-		<div id="container"></div>
-		<div id="info">
-		    <span id="result"></span>
-		</div> 
-		<script src="static/user/js/virtualjoystick.js"></script>
-		<script>
-			console.log("touchscreen is", VirtualJoystick.touchScreenAvailable() ? "available" : "not available");
-	
-			var joystick	= new VirtualJoystick({
-				container	: document.getElementById('container'),
-				mouseSupport	: true,
-			});
-			joystick.addEventListener('touchStart', function(){
-				console.log('down')
-			})
-			joystick.addEventListener('touchEnd', function(){
-				console.log('up')
-			})
+</head>
+<body>
+	<div class="simpleslide100">
+		<div class="simpleslide100-item bg-img1" style="background-image: url('static/user/images/bg04.jpg');"></div>
+	</div>
+    <div id="info">
+        <h3><span id="result"></span></h3>
+	</div> 
 
-			setInterval(function(){
-				var outputEl	= document.getElementById('result');
-				outputEl.innerHTML	= (joystick.right()	? ' right'	: '')
-					+ (joystick.up()	? ' up'		: '')
-					+ (joystick.left()	? ' left'	: '')
-					+ (joystick.down()	? ' down' 	: '')	
-			}, 1/30 * 1000);
-		</script>
-	</body>
+	<script src="static/user/js/virtualjoystick.js"></script>		
+	<script>
+		console.log("touchscreen is", VirtualJoystick.touchScreenAvailable() ? "available" : "not available");
+			var joystick	= new VirtualJoystick({
+			container	: document.getElementById('container'),
+			mouseSupport	: true,
+		});
+		joystick.addEventListener('touchStart', function(){
+			console.log('down')
+		})
+		joystick.addEventListener('touchEnd', function(){
+			console.log('up')
+		})
+		setInterval(function(){
+			var outputEl	= document.getElementById('result');
+			outputEl.innerHTML	= (joystick.right()	? ' right'	: '')
+				+ (joystick.up()	? ' up'		: '')
+				+ (joystick.left()	? ' left'	: '')
+				+ (joystick.down()	? ' down' 	: '')	
+		}, 1/30 * 1000);
+	</script>
+	<script src="static/user/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="static/user/vendor/bootstrap/js/popper.js"></script>
+	<script src="static/user/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="static/user/vendor/select2/select2.min.js"></script>
+	<script src="static/user/vendor/countdowntime/moment.min.js"></script>
+	<script src="static/user/vendor/countdowntime/moment-timezone.min.js"></script>
+	<script src="static/user/vendor/countdowntime/moment-timezone-with-data.min.js"></script>
+	<script src="static/user/vendor/countdowntime/countdowntime.js"></script>
+	<script src="static/user/vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+	<script src="static/user/js/main.js"></script>
+
+</body>
 </html>

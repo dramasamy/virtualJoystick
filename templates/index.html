@@ -40,7 +40,7 @@
 		<div id="info">
 		    <span id="result"></span>
 		</div> 
-		<script src="virtualjoystick.js"></script>
+		<script src="static/user/js/virtualjoystick.js"></script>
 		<script>
 			console.log("touchscreen is", VirtualJoystick.touchScreenAvailable() ? "available" : "not available");
 	
@@ -57,10 +57,7 @@
 
 			setInterval(function(){
 				var outputEl	= document.getElementById('result');
-				outputEl.innerHTML	= '<b>Result:</b> '
-					+ ' dx:'+joystick.deltaX()
-					+ ' dy:'+joystick.deltaY()
-					+ (joystick.right()	? ' right'	: '')
+				outputEl.innerHTML	= (joystick.right()	? ' right'	: '')
 					+ (joystick.up()	? ' up'		: '')
 					+ (joystick.left()	? ' left'	: '')
 					+ (joystick.down()	? ' down' 	: '')	

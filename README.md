@@ -31,7 +31,7 @@ Step 3 : Clone the repo
 -----------------------
 ```
 $ cd ~
-$ git clone https://github.com/dramasamy/virtualCommander.git
+$ git clone https://github.com/dramasamy/virtualJoystick.git
 ```
 
 Step 4 : Install dependencies  
@@ -45,7 +45,7 @@ $ source ~/virtualenvironment/joystick/bin/activate
 Step 5 : Start the application 
 -----------------------------
 ```
-(joystick)hostname:dramasamy$ python app.py
+(joystick)dramasamy@hostname$ python app.py
 ```
 
 

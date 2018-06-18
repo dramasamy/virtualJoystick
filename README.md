@@ -37,7 +37,7 @@ $ git clone https://github.com/dramasamy/virtualJoystick.git
 Step 4 : Install dependencies  
 -----------------------------
 ```
-$ cd ~/virtualCommander 
+$ cd ~/virtualJoystick
 $ source ~/virtualenvironment/joystick/bin/activate
 (joystick)dramasamy@hostname$ pip install  -r requirements.txt
 ```
